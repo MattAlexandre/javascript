@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> detran </title>
+    <style>
+        body{
+            background-color: #7fffd4;
+            align-items: center;
+            margin: auto;
+            text-align: center;
+            font: normal bold 30px arial;
+            
+        }
+        form{
+            box-shadow: 5px 5px 10px black;
+            font:italic bold 30px arial;
+            width: 230px;
+            height: 75px;
+            text-align: center;
+            border-radius: 15px;
+            margin: auto;
+
+        }
+        a{
+            font: normal bold 25px arial;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1> sistemas de multas </h1>
+
+    <a> digite vossa velocidade: </a><br>
+
+    <form>
+        <input type="number" name="txvel" id="txvel">
+
+        <input type="button" value="verificar" onclick="calcular()">
+    </form>
+
+  
+
+    <div id="res">
+
+    </div>
+
+    <script>
+
+       
+
+        function calcular(){ 
+
+            var txvel = window.document.getElementById('txvel');
+            var res = window.document.querySelector('div#res')
+            var vel = parseFloat(txvel.value);
+
+            res.innerHTML = ` vossa velocidade atual é de <strong>${vel} km/h</strong> `;
+
+            if(vel >= 60){
+                res.innerHTML += `<p> a velocidade esta acima, <strong> multado !</strong> </p>`
+            }else{
+            res.innerHTML += ` <p> sempre dirija com o cinto de segurança </p>`
+            }
+
+
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> primeiros passos DOM</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            color: black;
+            font: normal arial 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DOM = document object model - conjunto de objetos dentro do vosso navegador 
+                que vai dar acesso aos componentes internos do vosso web site =} -->
+    <h1> iniciando estudos com o DOM </h1>
+    <p>
+        aqui vai  o resultado
+    </p>
+    <p>
+        aprendendo a usar o <strong> DOM </strong> em javaScript
+    </p>
+    <div class="msg"> clique em mim </div>
+    <script>
+
+        var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+       
+        /*
+        corpo.style.background = "black";   
+
+        window.document.write(" esta escirto assim: " +p1.innerHTML)
+
+        */
+        /*
+        var =window.document.getElementsByTagId('msg')
+        d.style.background = 'green'
+        d.innerText = 'estou aguardando'
+        */
+
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'blue'
+
+
+    </script>
+    
+
+
+</body>
+</html>

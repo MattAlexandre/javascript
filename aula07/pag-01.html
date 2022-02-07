@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> dom - content </title>
+
+    <style>
+        body{
+            font: normal 20pt arial;
+            background-color: aquamarine;
+        }
+        forms{
+            background-color: rgba(92, 185, 154, 0.801);
+            box-shadow: 5px 5px 10px;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 30px;
+        }
+        input{
+            border-radius: 10px;
+            background-image: linear-gradient(to top, white,cyan);
+        }
+    </style>
+</head>
+<body>
+
+    <h1> somando valores </h1>
+
+    <forms>
+        <a> primeiro numero: </a> 
+        <input type="number" name="num1" id="num1">
+        
+        <a> segundo numero: </a>
+        <input type="text" name="num2" id="num2">
+        
+        <input type="button" value="somar" onclick="somar()">
+    </forms><br><br>
+
+    <div id="res">
+        resultado
+    </div>
+
+    <script>
+
+        function somar(){
+            
+        var num1 = window.document.getElementById('num1');
+        var num2 = window.document.getElementById('num2');
+
+        var res = window.document.getElementById('res');
+
+        var n1 = parseInt(num1.value);
+        var n2 = parseInt(num2.value);
+
+        var soma = n1 + n2;
+
+        res.innerHTML = `a soma entre${n1} e ${n2} é ${soma} =}`;
+    }
+    </script>
+</body>
+</html>
